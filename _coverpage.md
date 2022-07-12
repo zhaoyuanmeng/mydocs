@@ -6,4 +6,5 @@
 [马上开始 <i class="iconfont icon-down"></i>](#main)
 
 <!-- background image -->
-![](https://www.sunniejs.cn/static/wx/bg.jpg)
+<!-- ![](https://www.sunniejs.cn/static/wx/bg.jpg) -->
+![](https://w.wallhaven.cc/full/wq/wallhaven-wq9v8p.jpg)
