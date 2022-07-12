@@ -11,6 +11,10 @@
   - [h5](/blog/utils/h5.md)
   - [小程序/公众号](/blog/utils/wx.md)
 
+- 自己写的工具
+  - [zyd-cli](/blog/utils/cli.md)
+  - [vite插件](/blog/utils/vitePlugin.md)
+
 - 算法备忘录
   - [滑动窗口](/blog/suanfa/huadong.md)
   - [贪心算法](/blog/suanfa/tanxin.md)
@@ -26,6 +30,8 @@
 - [上面的代码地址](/blog/common/code.md)
 
 - [好用的轮子](/blog/common/lunzi.md)
+
+- [打包工具](/blog/common/build.md)
 
 - [vscode插件合集](/blog/common/vscode.md)
 
