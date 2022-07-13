@@ -820,6 +820,7 @@ body {
 .token.entity {
   cursor: help;
 }
+/* pre 下面的 code元素 */
 .markdown-section pre > code {
   -moz-osx-font-smoothing: initial;
   -webkit-font-smoothing: initial;
@@ -828,7 +829,7 @@ body {
   color: var(--codeTextColor);
   display: block;
   font-family: Roboto Mono, Monaco, courier, monospace;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: inherit;
   margin: 0 2px;
   max-width: inherit;
