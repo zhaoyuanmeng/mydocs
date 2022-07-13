@@ -37,3 +37,5 @@
 
 - [📅 vscode插件合集](/blog/common/vscode.md)
 
+- [🐯 宝藏网站](/blog/common/wangzhan.md)
+

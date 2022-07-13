@@ -8,9 +8,13 @@
   <meta name="description" content="Description">
   <link rel="shortcut icon" href="https://wallhaven.cc/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
   <link rel="stylesheet" href="./_media/custom.css">
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css">
+  <link rel="stylesheet" href="./_media/test.css">
+
+
 </head>
 
 <body>
@@ -21,7 +25,7 @@
       repo: 'https://gitee.com/zhao_yuanda/personal-blog',
       auto2top: true,
       coverpage: true,
-      // themeColor: '#25798A',
+      themeColor: '#25798A',
       themeColor: '#05364f',
       loadSidebar: true,
       loadNavbar: true,
@@ -31,22 +35,37 @@
         noData: '😞 No Results! ',
         depth: 6
       },
-
+      darklightTheme: {
+        defaultTheme: 'light',
+        siteFont: 'Source Sans Pro,Helvetica Neue,Arial,sans-serif',
+        codeFontFamily: 'Roboto Mono, Monaco, courier, monospace',
+        bodyFontSize: '15px',
+        dark: {
+          background: 'rgb(28,32,34)',
+          highlightColor: '#e96900',
+          codeBackgroundColor: 'rgb(34,39,46)',
+          codeTextColor: '#b4b4b4',
+        },
+        light: {
+          highlightColor: '#e96900',
+        }
+      },
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <!-- 简单的Click to copy按钮 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <!-- docsify的js依赖 -->
-  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script> -->
   <!-- emoji表情支持 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
   <!-- 图片放大缩小支持 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <!-- 搜索功能支持 -->
+  <!-- 字数插件 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <!-- 夜间切换 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
+
 </body>
 
 </html>
