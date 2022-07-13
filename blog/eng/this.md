@@ -1,9 +1,9 @@
-# 👽 this指向问题
+# 💕 this指向问题
 
-👾 this优先级:箭头函数 -> new绑定 -> 显示绑定call/bind/apply -> 隐式绑定 -> 默认绑定
+🤣 this优先级:箭头函数 -> new绑定 -> 显示绑定call/bind/apply -> 隐式绑定 -> 默认绑定
 
 ---
-## 👽 默认绑定
+## 💮 默认绑定
 
 默认绑定一般发生在回调函数,函数直接调用;
 ```javascript
@@ -27,7 +27,7 @@ arr.forEach(function () {
 ```
 --- 
 
-## 👽 隐式绑定
+## 💤 隐式绑定
 这个通俗点用一句话概括就是谁调用就是指向谁
 ```javascript
 const obj = {
@@ -42,7 +42,7 @@ obj.getName();
 ```
 --- 
 
-## 👽 显示绑定call,apply,bind
+## 🍊 显示绑定call,apply,bind
 ```javascript
 const obj1 = {
     name: 'joy',
@@ -65,7 +65,7 @@ fn();//obj2 sam
 ```
 --- 
 
-## 👽 new绑定
+## 🍔 new绑定
 ```javascript
 function Vehicle() {
     this.a = 2
@@ -76,7 +76,7 @@ new Vehicle(); //this指向Vehicle这个new出来的对象
 ```
 --- 
 
-## 👽  ES6的箭头函数
+## 🥔 ES6的箭头函数
 es6的箭头函数比较特殊,箭头函数this为父作用域的this，不是调用时的this.要知道前四种方式,都是调用时确定,也就是动态的,而箭头函数的this指向是静态的,声明的时候就确定了下来.比较符合js的词法作用域吧
 ```javascript
 window.name = 'win';
