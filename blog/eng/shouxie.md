@@ -1,7 +1,7 @@
-# 手写系列
+# 👺 手写系列
 
 ---
-- ## 手写promise
+- ## 👻 手写promise
 
 ```javascript
 
@@ -113,7 +113,7 @@ p1.then(
 ```
 
 ---
-- ## new实现的原理
+- ## 👻 new实现的原理
 
 ```javascript
 function Person(name){
@@ -136,8 +136,10 @@ let ceshi = myNew(Person,'liming')
 
 ```
 
+
+
 ---
-- ## 源码里面缓存的实现原理
+- ## 👻 源码里面缓存的实现原理
 
 ```javascript
 
@@ -158,6 +160,32 @@ function flushCallBacks() {
   cbs.forEach((cb) => cb());
   wating = false;
 }
+
+```
+
+
+---
+- ## 👻 bind call apply
+
+```javascript
+
+// 实现apply
+
+function apply(context, args){
+  //这里默认不传就是给window,也可以用es6给参数设置默认参数
+  context = context || window
+  args = args ? args : []
+  //给context新增一个独一无二的属性以免覆盖原有属性
+  const key = Symbol()
+  context[key] = this
+  //通过隐式绑定的方式调用函数
+  context[key](...args)
+   //删除添加的属性
+  delete context[key]
+  //返回函数调用的返回值
+  return result
+}
+
 
 ```
 

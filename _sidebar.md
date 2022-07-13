@@ -3,6 +3,7 @@
 
 - 好玩的原理
   - [闭包原理](/blog/eng/bibao.md)
+  - [this指向](/blog/eng/this.md)
   - [回调函数](/blog/eng/callback.md)
   - [手写系列](/blog/eng/shouxie.md)
 
