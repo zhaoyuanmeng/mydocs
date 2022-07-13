@@ -64,3 +64,5 @@
 [🥘 Code Sheep 资料集](https://www.r2coding.com/#/)
 
 [🥫 资源搜索引擎](https://www.nav3.cn/#/light)
+
+[🥫 资源搜索引擎2](https://www.5cv.top/)
