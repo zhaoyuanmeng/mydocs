@@ -2,8 +2,8 @@ window.$docsify.plugins = [].concat((e, o) => {
   let t = {
     siteFont: "PT Sans",
     defaultTheme: "dark",
-    codeFontFamily: "Roboto Mono, Monaco, courier, monospace",
-    bodyFontSize: "17px",
+    // codeFontFamily: "Roboto Mono, Monaco, courier, monospace",
+    bodyFontSize: "24px",
     dark: {
       accent: "#42b983",
       toogleBackground: "#ffffff",
