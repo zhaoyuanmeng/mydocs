@@ -21,6 +21,7 @@
 - 🛶 自己写的工具
   - [zyd-cli](/blog/utils/cli.md)
   - [vite插件](/blog/utils/vitePlugin.md)
+  - [爬虫](/blog/utils/pachong.md)
 
 - 🪂 算法备忘录
   - [滑动窗口](/blog/suanfa/huadong.md)
