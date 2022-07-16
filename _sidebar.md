@@ -2,11 +2,23 @@
 - [🛑 整体结构](/blog/docsify.md)
 
 - 💡  好玩的原理
-  - [闭包原理](/blog/eng/bibao.md)
+  - [💰 闭包原理](/blog/eng/bibao.md)
   - [this指向](/blog/eng/this.md)
   - [EventLoop](/blog/eng/eventLoop.md)
   - [回调函数](/blog/eng/callback.md)
   - [手写系列](/blog/eng/shouxie.md)
+
+- 💡  编译原理相关
+  - [⚽ 理论支撑](/blog/bianyi/lilun.md)
+
+- 💡  设计模式相关
+  - [🚀 前置知识](/blog/sheji/pre.md)
+  - [🐻 单例模式](/blog/sheji/single.md)
+  - [⚽ 工厂模式](/blog/sheji/factory.md)
+  - [⌚ 观察者模式](/blog/sheji/watch.md)
+  - [🛑 发布订阅者模式](/blog/sheji/fubu.md)
+  - [🛶 装饰器模式](/blog/sheji/zs.md)
+
 
 - 🎌 源码阅读
   - [⚽ Vue3](/blog/yuanma/vue3.md)
@@ -29,6 +41,7 @@
   - [动态规划](/blog/suanfa/dongtai.md)
 
 - ⌚ 工程化思想
+  - [项目搭建理论](/blog/gongcheng/init.md)
   - [自动化测试](/blog/gongcheng/autoTest.md)
   - [前端监控](/blog/gongcheng/maidian.md)
 
