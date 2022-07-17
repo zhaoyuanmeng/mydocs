@@ -20,6 +20,7 @@
 - Yarn
 - Npm
 
+[package.json字段详解][https://www.jianshu.com/p/1368b6bdf132]
 - npm yarn install 原理以及存在的问题[https://juejin.cn/post/6932046455733485575#heading-7]
 
 - npm run 理论
