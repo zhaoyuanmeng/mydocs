@@ -3,10 +3,11 @@
 
 - 💡  好玩的原理
   - [💰 闭包原理](/blog/eng/bibao.md)
-  - [this指向](/blog/eng/this.md)
-  - [EventLoop](/blog/eng/eventLoop.md)
-  - [回调函数](/blog/eng/callback.md)
-  - [手写系列](/blog/eng/shouxie.md)
+  - [💀 模块化](/blog/eng/mokuai.md)
+  - [🥳 this指向](/blog/eng/this.md)
+  - [🌏 EventLoop](/blog/eng/eventLoop.md)
+  - [✍️ 回调函数](/blog/eng/callback.md)
+  - [🔀 手写系列](/blog/eng/shouxie.md)
 
 - 💡  编译原理相关
   - [⚽ 理论支撑](/blog/bianyi/lilun.md)
@@ -26,19 +27,19 @@
   - [🚀 Babel](/blog/yuanma/babel.md)
 
 - 🌋 工具库
-  - [pc](/blog/utils/pc.md)
-  - [h5](/blog/utils/h5.md)
-  - [小程序/公众号](/blog/utils/wx.md)
+  - [👨 PC](/blog/utils/pc.md)
+  - [🪔 H5](/blog/utils/h5.md)
+  - [🍂小程序/公众号](/blog/utils/wx.md)
 
 - 🛶 自己写的工具
-  - [zyd-cli](/blog/utils/cli.md)
-  - [vite插件](/blog/utils/vitePlugin.md)
-  - [爬虫](/blog/utils/pachong.md)
+  - [🌱 zyd-cli](/blog/utils/cli.md)
+  - [🐰 vite插件](/blog/utils/vitePlugin.md)
+  - [👋 爬虫](/blog/utils/pachong.md)
 
 - 🪂 算法备忘录
-  - [滑动窗口](/blog/suanfa/huadong.md)
-  - [贪心算法](/blog/suanfa/tanxin.md)
-  - [动态规划](/blog/suanfa/dongtai.md)
+  - [😄 滑动窗口](/blog/suanfa/huadong.md)
+  - [🔥 贪心算法](/blog/suanfa/tanxin.md)
+  - [🕉️ 动态规划](/blog/suanfa/dongtai.md)
 
 - ⌚ 工程化思想
   - [项目搭建理论](/blog/gongcheng/init.md)
