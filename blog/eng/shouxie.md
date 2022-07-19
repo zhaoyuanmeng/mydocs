@@ -1,8 +1,7 @@
 # 👺 手写系列
-
+- [虚拟列表](#👻-虚拟列表)
 ---
-- ## 👻 手写promise
-
+- ## <span id ="a">👻 手写promise</span>
 ```javascript
 
 // 这个就是回调函数的完美应用
@@ -188,4 +187,109 @@ function apply(context, args){
 
 
 ```
+
+- ## 👻 虚拟列表
+
+```javascript
+<template>
+  <h1>测试虚拟列表{{}}</h1>
+  <div
+    ref="demo"
+    class="scroll-box demo"
+    :style="`height: ${showNumber * itemHeight}px;`"
+  >
+    <!-- 这个是用来有滚动的效果的 -->
+    <div
+      class="scroll-blank"
+      :style="`height: ${data.length * itemHeight}px;`"
+    ></div>
+    <div class="scroll-data" :style="`top: ${positionTop}px;`">
+      <div v-for="(item, index) in activeList" :key="item" class="scroll-item">
+        {{ item }}
+      </div>
+    </div>
+  </div>
+</template>
+<script lang="ts">
+import { defineComponent, computed, onMounted, onUnmounted, ref } from 'vue';
+export default defineComponent({
+  name: 'VueUse',
+  setup() {
+    // 设计思路
+    // 监听滚轮事件/触摸事件，记录列表的总偏移量。
+    // 根据总偏移量计算列表的可视元素起始索引。
+    // 从起始索引渲染元素至视口底部。
+    // 当总偏移量更新时，重新渲染可视元素列表。（可以用computed计算）
+    // 为可视元素列表前后加入缓冲元素。
+    // 在滚动量比较小时，直接修改可视元素列表的偏移量。
+    // 在滚动量比较大时（比如拖动滚动条），会重新渲染整个列表。
+    // 事件节流。
+
+    const createData = (length: number) => {
+      return Object.keys(new Array(length).fill(''));
+    };
+
+    const demo: any = ref(null); // 外框盒子
+    const showNumber = 20; // 当前视窗展示条数
+    const itemHeight = 20; // 每一条内容的高度
+    const data = createData(1000); // 实际数据
+    let startNum = ref(0); // 当前视窗范围内第一个元素下标
+    let positionTop = ref(0); // 当前视窗范围内第一个元素偏移量
+
+    // 计算当前视窗内实际要渲染的内容
+    const activeList = computed(() => {
+      const start = startNum.value;
+      return data.slice(start, start + showNumber);
+    });
+
+    // 滚动的时候计算当前视窗范围内第一个元素下标
+    const scrollEvent = (event: any) => {
+      const { scrollTop } = event.target;
+      startNum.value = parseInt(scrollTop / itemHeight + '');
+      positionTop.value = scrollTop;
+    };
+
+    onMounted(() => {
+      demo.value?.addEventListener('scroll', scrollEvent);
+    });
+    onUnmounted(() => {
+      if (!demo.value) return;
+      demo.value?.removeEventListener('scroll', scrollEvent);
+      demo.value = null;
+    });
+
+    return {
+      showNumber,
+      itemHeight,
+      demo,
+      positionTop,
+      data,
+      activeList,
+    };
+  },
+});
+</script>
+
+<style>
+.scroll-box {
+  position: relative;
+  overflow: auto;
+  width: 400px;
+  border: 1px solid rgb(0, 0, 0);
+}
+.scroll-data {
+  position: absolute;
+  width: 100%;
+}
+.scroll-item {
+  height: 20px;
+}
+.scroll-item:hover {
+  background: rgb(104, 111, 211);
+  color: #fff;
+}
+</style>
+
+```
+[参考资料][https://juejin.cn/post/6844904183582162957#heading-3]
 
