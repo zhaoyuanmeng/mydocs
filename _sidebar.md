@@ -68,3 +68,6 @@
 
 - [🐯 宝藏网站](/blog/common/wangzhan.md)
 
+
+- [📚 日记](/blog/riji/riji.md)
+
