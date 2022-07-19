@@ -212,9 +212,13 @@ function apply(context, args){
 </template>
 <script lang="ts">
 import { defineComponent, computed, onMounted, onUnmounted, ref } from 'vue';
+import { useDebounceFn, useThrottleFn } from '@vueuse/core';
+
 export default defineComponent({
   name: 'VueUse',
   setup() {
+    //  scrollTop在有滚动条的情况下，为元素可视区域距离元素顶部的像素，也就是已经滚动了多少距离
+
     // 设计思路
     // 监听滚轮事件/触摸事件，记录列表的总偏移量。
     // 根据总偏移量计算列表的可视元素起始索引。
@@ -243,18 +247,25 @@ export default defineComponent({
     });
 
     // 滚动的时候计算当前视窗范围内第一个元素下标
+    // 加个优化 节流
     const scrollEvent = (event: any) => {
       const { scrollTop } = event.target;
       startNum.value = parseInt(scrollTop / itemHeight + '');
       positionTop.value = scrollTop;
+      console.log('positionTop', positionTop.value);
+      console.log('startNum', startNum.value);
     };
+    // 防抖的结果
+    const debouncedFn = useDebounceFn(scrollEvent, 100);
 
+    // 节流的结果
+    const throttleFn = useThrottleFn(scrollEvent, 100);
     onMounted(() => {
-      demo.value?.addEventListener('scroll', scrollEvent);
+      demo.value?.addEventListener('scroll', throttleFn);
     });
     onUnmounted(() => {
       if (!demo.value) return;
-      demo.value?.removeEventListener('scroll', scrollEvent);
+      demo.value?.removeEventListener('scroll', throttleFn);
       demo.value = null;
     });
 
@@ -279,6 +290,7 @@ export default defineComponent({
 }
 .scroll-data {
   position: absolute;
+  background-color: aqua;
   width: 100%;
 }
 .scroll-item {
