@@ -1,5 +1,10 @@
 # 💀 模块相关知识
 
+- [前置知识](#前置知识进化过程)
+- [CommonJS](#commonjs这个很重要)
+- [ESMoudule](#esmoudule)
+- [UMD](#umd)
+
 ## 前置知识(进化过程)
 
 - 全局function模式
@@ -44,7 +49,7 @@ obj.data = 'aaa'
 ---
 
 
-- IIFE模式(这个很重要源码打完包都是这个玩意)
+- <font color="red" size="5">IIFE模式(这个很重要源码打完包都是这个玩意)</font>
 
 数据是私有的,外部只能通过暴露的方法进行操作,将数据和行为方法封装到一个函数内部,通过给window添加属性来向外暴露接口
 
@@ -293,8 +298,10 @@ customName(); // 'foo'
 });
 
 ```
-
+[回到顶部](#)
 
 [参考资料](https://juejin.cn/post/6844903744518389768#heading-1)
+
 [参考资料](https://zhuanlan.zhihu.com/p/467991875)
+
 [参考资料](https://es6.ruanyifeng.com/#docs/module-loader#ES6-%E6%A8%A1%E5%9D%97%E4%B8%8E-CommonJS-%E6%A8%A1%E5%9D%97%E7%9A%84%E5%B7%AE%E5%BC%82)
