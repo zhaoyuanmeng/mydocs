@@ -69,6 +69,9 @@
 
 - [🐯 宝藏网站](/blog/common/wangzhan.md)
 
+- [🐯 面试题](/blog/common/mianshi.md)
+
+
 
 - [📚 日记](/blog/riji/riji.md)
 
