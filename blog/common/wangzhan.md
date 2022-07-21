@@ -33,6 +33,8 @@
 
 [🎅 代码随想录](https://www.programmercarl.com/)
 
+[🎅 若川视野](https://www.lxchuan12.cn/)
+
 [🎃 LeetCode](https://leetcode.cn/)
 
 [🤝 emoji资源](https://emojipedia.org/)
