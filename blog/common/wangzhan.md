@@ -25,6 +25,8 @@
 
 [⛷️ rollup](https://www.rollupjs.com/)
 
+[⛷️ Jest测试](https://github.yanhaixiang.com/jest-tutorial/)
+
 [🦠 devdocs在线查询Js方法](https://devdocs.io/)
 
 [💪 Acwing](https://www.acwing.com/)
