@@ -2,6 +2,8 @@
 - [🛑 整体结构](/blog/docsify.md)
 
 - 💡  好玩的原理
+  - [😾 BOM](/blog/eng/bom.md)
+  - [✨ DOM](/blog/eng/dom.md)
   - [💰 闭包原理](/blog/eng/bibao.md)
   - [💀 模块化](/blog/eng/mokuai.md)
   - [🥳 this指向](/blog/eng/this.md)

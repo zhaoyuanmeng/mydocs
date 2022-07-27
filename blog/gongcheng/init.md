@@ -20,7 +20,31 @@
 - Yarn
 - Npm
 
-[package.json字段详解][https://www.jianshu.com/p/1368b6bdf132]
+## package.json字段详解
+
+
+- type字段
+>1 type字段的产生用于定义package.json文件和该文件所在目录根目录中.js文件和无拓展名文件的处理方式。值为’moduel’则当作es模块处理；值为’commonjs’则被当作commonJs模块处理
+>
+>2目前node默认的是如果pacakage.json没有定义type字段，则按照commonJs规范处理
+>
+>3node官方建议包的开发者明确指定package.json中type字段的值
+>
+>4无论package.json中的type字段为何值，.mjs的文件都按照es模块来处理，.cjs的文件都按照commonJs模块来处理
+
+---
+
+- main字段
+> 默认入口文件 而且默认是commonjs规范
+>
+
+- moudle字段
+> 如果采用import 导入包的时候 会加载这个入口文件 ESMoudule
+>
+
+---
+
+
 - npm yarn install 原理以及存在的问题[https://juejin.cn/post/6932046455733485575#heading-7]
 
 - npm run 理论
