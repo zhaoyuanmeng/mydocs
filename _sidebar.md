@@ -45,6 +45,7 @@
   - [🐰 vite插件](/blog/utils/vitePlugin.md)
   - [👋 爬虫](/blog/utils/pachong.md)
   - [👋 稀奇古怪的东西](/blog/utils/play.md)
+  - [👋 canvas技术](/blog/utils/canvas.md)
 
 - 🪂 算法备忘录
   - [😄 滑动窗口](/blog/suanfa/huadong.md)
