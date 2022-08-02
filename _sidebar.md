@@ -6,6 +6,7 @@
   - [✨ DOM](/blog/eng/dom.md)
   - [💰 闭包原理](/blog/eng/bibao.md)
   - [💀 模块化](/blog/eng/mokuai.md)
+  - [💀 函数继承](/blog/eng/jicheng.md)
   - [🥳 this指向](/blog/eng/this.md)
   - [🌏 EventLoop](/blog/eng/eventLoop.md)
   - [✍️ 回调函数](/blog/eng/callback.md)
