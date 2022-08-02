@@ -7,7 +7,49 @@
 >
 ><font color="italic">实例与构造函数原型之间有直接的联系，但实例与构造函数之间没有</font>
 >
->3
+>构造函数/原型对象/和实例是三个完全不同的对象(会new的底层原理就好理解了)
+>
+>实例通过____proto__链接到原型对象,实际上指向prototype (person1.____proto__ === Person.prototype)
+>
+>同一个构造函数创建的两个实例 共享同一个原型对象 
+>
+>构造函数通过prototype属性链接到原型对象
+>
+>
+><font color="italic">原型层级(原型链)</font>
+>
+>在通过对象访问属性时，会按照这个属性的名称开始搜索。搜索开始于对象实例本身。如果在这个实例上发现了给定的名称，则返回该名称对应的值。如果没有找到这个属性，则搜索会沿着指针进入原型对象，然后在原型对象上找到属性后，再返回对应的值。这就是原型用于在多个对象实例间共享属性和方法的原理。
+>
+>
+
+
+```javascript
+
+// 只要给对象实例添加一个属性，这个属性就会遮蔽（shadow）原型对象上的同名属性，也就是虽然
+// 不会修改它，但会屏蔽对它的访问。即使在实例上把这个属性设置为 null，也不会恢复它和原型的联
+// 系。不过，使用 delete 操作符可以完全删除实例上的这个属性，从而让标识符解析过程能够继续搜索
+// 原型对象。
+function Person() {} 
+Person.prototype.name = "Nicholas"; 
+Person.prototype.age = 29; 
+Person.prototype.job = "Software Engineer"; 
+Person.prototype.sayName = function() { 
+ console.log(this.name); 
+}; 
+let person1 = new Person(); 
+let person2 = new Person(); 
+person1.name = "Greg"; 
+console.log(person1.name); // "Greg"，来自实例
+console.log(person2.name); // "Nicholas"，来自原型
+delete person1.name; 
+console.log(person1.name); // "Nicholas"，来自原型
+
+
+```
+
+
+
+
 ---
 
 # 下面创建对象的方式
@@ -46,7 +88,7 @@ console.log(per1,per2);
 >
 > 引发的一个面试题 new做了什么 ?
 >
-> (1) 在内存中创建一个对象
+> (1) 在内存中创建一个对象 new Object()
 >
 > (2) 在这个新对象内部的____proto__被赋值未为构造函数的prototype属性
 >
@@ -90,6 +132,10 @@ p2.waibu();//Liming
 > 每个<font color="red">函数</font>都会创建一个prototype属性,这个属性是一个对象,包含应该由特定引用类型的实例共享的属性和方法,<font color="red">实际上这个对象就是通过调用构造函数创建的对象的原型</font>,使用原型对象的好处是在它上面定义的属性和方法可以被对象实例共享
 >
 >
+>缺点:对于包含引用值的属性不好处理,不同的实例应该有属于自己的属性副本
+>
+>
+>
 
 ```javascript
 
@@ -108,3 +154,35 @@ console.log(person1.sayHello == person2.sayHello); // true
 
 ```
 ---
+
+
+# 主题(继承)
+
+## 原型链
+
+>ECMA-262 把原型链定义为 ECMAScript 的主要继承方式。其基本思想就是通过原型继承多个引用类型的属性和方法。
+>
+>基本思想:通过原型本身的内部指针指向另一个原型,相应地另一个原型也有一个指针指向另一个构造函数,这样在实例和原型之间构造了一个原型链
+>
+>
+
+```javascript
+function Per(name) {
+  this.name = name;
+}
+Per.prototype.sayHello = function () {
+  console.log("hello", this.name);
+};
+
+function Stu() {
+  this.s = false;
+}
+Stu.prototype = new Per("li");
+
+Stu.prototype.getS = function () {
+  console.log(this.s);
+};
+let stu1 = new Stu();
+console.log("st1", stu1);
+
+```
