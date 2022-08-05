@@ -9,7 +9,7 @@
 >
 >构造函数/原型对象/和实例是三个完全不同的对象(会new的底层原理就好理解了)
 >
->实例通过____proto__链接到原型对象,实际上指向prototype (person1.____proto__ === Person.prototype)
+><font color="italic">实例通过____proto__链接到原型对象,实际上指向prototype (person1.____proto__ === Person.prototype),原理是new的作用,实例通过__proto__链接到原型对象, 它实际上指向隐藏特性[[Prototype]] </font>
 >
 >同一个构造函数创建的两个实例 共享同一个原型对象 
 >
@@ -19,6 +19,11 @@
 ><font color="italic">原型层级(原型链)</font>
 >
 >在通过对象访问属性时，会按照这个属性的名称开始搜索。搜索开始于对象实例本身。如果在这个实例上发现了给定的名称，则返回该名称对应的值。如果没有找到这个属性，则搜索会沿着指针进入原型对象，然后在原型对象上找到属性后，再返回对应的值。这就是原型用于在多个对象实例间共享属性和方法的原理。
+>
+>
+><font color="italic">原型链的问题1:原先的实例会变为原型属性</font>
+>
+><font color="italic">原型链的问题2:原型链的第二个问题是，子类型在实例化时不能给父类型的构造函数传参。事实上，我们无法在不影响所有对象实例的情况下把参数传进父类的构造函数。再加上之前提到的原型中包含引用值的问题，就导致原型链基本不会被单独使用</font>
 >
 >
 
@@ -45,10 +50,21 @@ delete person1.name;
 console.log(person1.name); // "Nicholas"，来自原型
 
 
+// 原型链的问题1例子
+function SuperType() { 
+ this.colors = ["red", "blue", "green"]; 
+} 
+function SubType() {} 
+// 继承 SuperType 
+SubType.prototype = new SuperType(); 
+let instance1 = new SubType(); 
+instance1.colors.push("black"); 
+console.log(instance1.colors); // "red,blue,green,black" 
+let instance2 = new SubType(); 
+console.log(instance2.colors); // "red,blue,green,black" 
+
+
 ```
-
-
-
 
 ---
 
@@ -127,46 +143,28 @@ p2.waibu();//Liming
 --- 
 
 
-## 原型模式
-
-> 每个<font color="red">函数</font>都会创建一个prototype属性,这个属性是一个对象,包含应该由特定引用类型的实例共享的属性和方法,<font color="red">实际上这个对象就是通过调用构造函数创建的对象的原型</font>,使用原型对象的好处是在它上面定义的属性和方法可以被对象实例共享
->
->
->缺点:对于包含引用值的属性不好处理,不同的实例应该有属于自己的属性副本
->
->
->
-
-```javascript
-
-function PersonPlus(name, age) {
-  PersonPlus.prototype.name = name;
-  PersonPlus.prototype.age = age;
-  PersonPlus.prototype.sayHello = function () {
-    console.log("hello", this.name);
-  };
-}
-
-let person1 = new PersonPlus("li", 23);
-let person2 = new PersonPlus("li", 24);
-
-console.log(person1.sayHello == person2.sayHello); // true
-
-```
 ---
 
 
-# 主题(继承)
-
-## 原型链
+## 原型和原型链
 
 >ECMA-262 把原型链定义为 ECMAScript 的主要继承方式。其基本思想就是通过原型继承多个引用类型的属性和方法。
 >
 >基本思想:通过原型本身的内部指针指向另一个原型,相应地另一个原型也有一个指针指向另一个构造函数,这样在实例和原型之间构造了一个原型链
 >
+><font color="italic">重要的一条理论(之前疏忽的):重写构造函数上的原型之后再创建的实例才会引用新的原型。而在此之前创建的实例仍然会引用最初的原型,实例只有指向原型的指针,没有指向构造函数的指针</font>
+>
+><font color="red">原型的问题:它弱化了向构造函数传递初始化参数的能力,会导致所有实例默认都取到相同的属性值.最大的问题是他的共享特性,以及包含引用值的属性.</font>
+>
+> 每个<font color="red">函数</font>都会创建一个prototype属性,这个属性是一个对象,包含应该由特定引用类型的实例共享的属性和方法,<font color="red">实际上这个对象就是通过调用构造函数创建的对象的原型</font>,使用原型对象的好处是在它上面定义的属性和方法可以被对象实例共享
+>
+>
+>
 >
 
 ```javascript
+
+// 原型链的例子
 function Per(name) {
   this.name = name;
 }
@@ -185,4 +183,42 @@ Stu.prototype.getS = function () {
 let stu1 = new Stu();
 console.log("st1", stu1);
 
+// 针对上面那个理论的举例
+
+function Person() {} 
+let friend = new Person(); 
+Person.prototype = { 
+ constructor: Person, 
+ name: "Nicholas", 
+ age: 29, 
+ job: "Software Engineer", 
+ sayName() { 
+ console.log(this.name); 
+ } 
+}; 
+friend.sayName(); // 错误
+
+// 原型问题的举例
+
+function Person() {} 
+Person.prototype = { 
+ constructor: Person, 
+ name: "Nicholas", 
+ age: 29, 
+ job: "Software Engineer", 
+ friends: ["Shelby", "Court"], 
+ sayName() { 
+ console.log(this.name); 
+ } 
+}; 
+let person1 = new Person(); 
+let person2 = new Person(); 
+person1.friends.push("Van"); 
+console.log(person1.friends); // "Shelby,Court,Van" 
+console.log(person2.friends); // "Shelby,Court,Van" 
+console.log(person1.friends === person2.friends); // true 
+
 ```
+
+
+## 盗用构造函数
