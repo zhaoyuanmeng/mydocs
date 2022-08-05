@@ -220,5 +220,100 @@ console.log(person1.friends === person2.friends); // true
 
 ```
 
+---
 
 ## 盗用构造函数
+
+> 目的是为了解决原型包含引用值导致的继承问题
+>
+>基本思路很简单：在子类构造函数中调用父类构造函数。因为毕竟函数就是在特定上下文中执行代码的简单对象，所以可以使用apply()和 call()方法以新创建的对象为上下文执行构造函数.而且还可以传递参数
+>
+
+```javascript
+function SuperType(name){ 
+ this.name = name; 
+} 
+function SubType() { 
+ // 继承 SuperType 并传参
+ SuperType.call(this, "Nicholas"); 
+ // 实例属性
+ this.age = 29; 
+} 
+let instance = new SubType(); 
+console.log(instance.name); // "Nicholas"; 
+console.log(instance.age); // 29 
+
+```
+
+---
+
+
+
+## 组合继承
+
+> 目的是为了综合了原型链和盗用构造函数，将两者的优点集中了起来
+>
+>基本的思路是使用原型链继承原型上的属性和方法，而通过盗用构造函数继承实例属性。这样既可以把方法定义在原型上以实现重用，又可以让每个实例都有自己的属性。
+>
+>
+
+```javascript
+function SuperType(name){ 
+ this.name = name; 
+ this.colors = ["red", "blue", "green"]; 
+} 
+SuperType.prototype.sayName = function() { 
+ console.log(this.name); 
+}; 
+function SubType(name, age){ 
+ // 继承属性
+ SuperType.call(this, name); 
+ this.age = age; 
+} 
+// 继承方法
+SubType.prototype = new SuperType(); 
+SubType.prototype.sayAge = function() { 
+ console.log(this.age); 
+}; 
+let instance1 = new SubType("Nicholas", 29); 
+instance1.colors.push("black"); 
+console.log(instance1.colors); // "red,blue,green,black" 
+instance1.sayName(); // "Nicholas"; 
+instance1.sayAge(); // 29 
+let instance2 = new SubType("Greg", 27); 
+console.log(instance2.colors); // "red,blue,green" 
+instance2.sayName(); // "Greg"; 
+instance2.sayAge(); // 27 
+
+```
+
+---
+
+
+## 原型式继承
+
+> 这个实际上就是Object.create()函数
+
+```javascript
+let person = { 
+ name: "Nicholas", 
+ friends: ["Shelby", "Court", "Van"] 
+}; 
+let anotherPerson = Object.create(person, { 
+ name: { 
+ value: "Greg" 
+ } 
+}); 
+console.log(anotherPerson.name); // "Greg" 
+
+```
+
+---
+
+
+## 寄生式继承
+待写
+
+## 寄生式组合继承
+
+待写
