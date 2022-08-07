@@ -21,6 +21,7 @@
   - [🚀 前置知识](/blog/sheji/pre.md)
   - [🐻 单例模式](/blog/sheji/single.md)
   - [⚽ 工厂模式](/blog/sheji/factory.md)
+  - [⚽ 策略模式](/blog/sheji/celue.md)
   - [⌚ 观察者模式](/blog/sheji/watch.md)
   - [🛑 发布订阅者模式](/blog/sheji/fubu.md)
   - [🛶 装饰器模式](/blog/sheji/zs.md)
