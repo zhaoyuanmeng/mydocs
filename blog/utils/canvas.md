@@ -71,10 +71,12 @@
 <script>
   const cnv = document.getElementById('c')
   const cxt = cnv.getContext('2d')
-
-  const image = document.getElementById('dogImg')
-
-  cxt.drawImage(image, 70, 70)
+ // 通过dom的方式
+window.onload = ( )=>{ 
+    const image = document.getElementById('dogImg')
+    cxt.drawImage(image, 70, 70)
+}
+  
 </script>
 
 
