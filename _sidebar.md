@@ -50,6 +50,7 @@
   - [👋 稀奇古怪的东西](/blog/utils/play.md)
   - [👋 canvas技术](/blog/utils/canvas.md)
   - [👋 缓存技术indexDB](/blog/utils/indexDB.md)
+  - [👋 正则表达式](/blog/utils/zhengze.md)
 
 - 🪂 算法备忘录
   - [😄 滑动窗口](/blog/suanfa/huadong.md)
