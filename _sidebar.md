@@ -68,6 +68,13 @@
 - 📚 后端
   - [Nest](/blog/houduan/nest.md)
 
+- 📚 运维
+  - [GitHub](/blog/yunwei/github.md)
+  - [Jekins](/blog/yunwei/jekens.md)
+  - [CICD](/blog/yunwei/cicd.md)
+  - [K8s](/blog/yunwei/k8s.md)
+  - [Nginx](/blog/yunwei/nginx.md)
+
 - [📤 上面的代码地址](/blog/common/code.md)
 
 - [💰 好用的轮子](/blog/common/lunzi.md)
