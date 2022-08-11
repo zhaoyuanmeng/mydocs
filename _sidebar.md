@@ -69,6 +69,7 @@
   - [Nest](/blog/houduan/nest.md)
 
 - 📚 运维
+  - [Git命令](/blog/yunwei/git.md)
   - [GitHub](/blog/yunwei/github.md)
   - [Jekins](/blog/yunwei/jekens.md)
   - [CICD](/blog/yunwei/cicd.md)
