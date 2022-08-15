@@ -55,6 +55,10 @@
 - package.json 参数意义(类似pnpm的yaml文件意义)
 - 以及怎么软连接找到exe文件去执行命令
 
+- npm | yarn | pnpm create xxx的机制作用
+ - create-xxx包全局安装，或者如果软件包已存在，则将软件包更新为最新版本
+ - 运行位于bin入门工具包领域的可执行文件package.json，将其转发<args>给它
+
 - 理论知识
 [参考资料][https://juejin.cn/post/6932046455733485575]
 ## monorepo搭建的流程
