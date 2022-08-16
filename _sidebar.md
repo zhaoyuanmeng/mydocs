@@ -66,6 +66,7 @@
   - [客户端](/blog/kuaduan/zhuomian.md)
   - [小程序开发](/blog/kuaduan/xiaochengxu.md)
   - [公众号开发](/blog/kuaduan/gongzhonghao.md)
+  - [uni-app开发](/blog/kuaduan/uniapp.md)
   - [不同端的调试](/blog/kuaduan/tiaoshi.md)
 - 📚 读书感悟
   - [设计模式](/blog/book/sjms.md)
