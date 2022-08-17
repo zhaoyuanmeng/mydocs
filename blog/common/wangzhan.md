@@ -72,3 +72,5 @@
 [🥫 资源搜索引擎](https://www.nav3.cn/#/light)
 
 [🥫 资源搜索引擎2](https://www.5cv.top/)
+
+[🥫 资源搜索捷径盒](https://jiejinghe.com/)
