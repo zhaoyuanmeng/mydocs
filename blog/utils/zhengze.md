@@ -98,7 +98,11 @@
 >
 >例如(123|456){2} // 匹配 123123、456456、123456、456123
 >
+>?:可以让分组变为非捕获分组，非捕获分组可以提高性能和简化逻辑
 >
+>'123'.match(/(?:123)/) // 返回 ['123']
+>
+>'123'.match(/(123)/)  // 返回 ['123', '123']
 
 ---
 
@@ -121,9 +125,26 @@
 ---
 
 
+
+## Js中使用正则
+
+>
+>使用字面量的方式 let reg = /abc/g  ===> reg是一个正则实例
+>
+正则实例的方法
+
+| 字符 | 含义  |
+|  ---  | ---  |
+|  test  |   /abc/.test('abc')==> true  /abc/.test('abcc')==> flase   |
+|  match  |   'abcabcabc'.match(/abc/g) ==> ['abc', 'abc', 'abc']    |
+|  replace  |  字符串的replace方法，可以将字符串的匹配字符，替换成另外的指定字符  'abc'.replace(/[abc]/, 'y') ==> ybc  'abc'.replace(/[abc]/g, 'y') ==> yyy 全局替换 |
+
+
+
 ## 限制输入的长度并且必须是数字(利用keypress事件)
 
 ```javascript
+
 // 传入的是输入框的值
   isNumber(value) {
       let evt = window.event
@@ -138,6 +159,8 @@
       }
     },
 
-
-
 ```
+
+
+
+[好用的工具小册](https://r2coding.com/#/README?id=%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F)

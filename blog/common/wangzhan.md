@@ -74,3 +74,7 @@
 [🥫 资源搜索引擎2](https://www.5cv.top/)
 
 [🥫 资源搜索捷径盒](https://jiejinghe.com/)
+
+[好的博客](https://blog.zhangxiao.cool/)
+
+[好的博客-工具包](https://r2coding.com/)
