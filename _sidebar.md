@@ -84,7 +84,7 @@
 
 - 📚 后端
 
-  - [VueSSR](/blog/houduan/next.md)
+  - [VueSSR](/blog/houduan/nust.md)
   - [Nest](/blog/houduan/nest.md)
 
 - 📚 运维
