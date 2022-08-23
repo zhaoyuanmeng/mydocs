@@ -1,7 +1,10 @@
 # 🎨 宝藏网站
+
+[🎖️ Cnode 社区](https://cnodejs.org/)
+
 [🎖️ AntFU ](https://antfu.me)
 
-[🎖️ Vue官方新版](https://staging-cn.vuejs.org/)
+[🎖️ Vue 官方新版](https://staging-cn.vuejs.org/)
 
 [📘 Vue-Router](https://router.vuejs.org/zh/)
 
@@ -11,7 +14,7 @@
 
 [🏀 Axios](http://www.axios-js.com/)
 
-[🎣 Ts学习文档](https://ts.yayujs.com/)
+[🎣 Ts 学习文档](https://ts.yayujs.com/)
 
 [🚴‍♂️ TailWindCss](https://www.tailwindcss.cn/)
 
@@ -25,13 +28,13 @@
 
 [⛷️ rollup](https://www.rollupjs.com/)
 
-[⛷️ Jest测试](https://github.yanhaixiang.com/jest-tutorial/)
+[⛷️ Jest 测试](https://github.yanhaixiang.com/jest-tutorial/)
 
-[🦠 devdocs在线查询Js方法](https://devdocs.io/)
+[🦠 devdocs 在线查询 Js 方法](https://devdocs.io/)
 
 [💪 Acwing](https://www.acwing.com/)
 
-[🐰 typeorm数据库代理](https://typeorm.bootcss.com/)
+[🐰 typeorm 数据库代理](https://typeorm.bootcss.com/)
 
 [🎅 代码随想录](https://www.programmercarl.com/)
 
@@ -39,21 +42,21 @@
 
 [🎃 LeetCode](https://leetcode.cn/)
 
-[🤝 emoji资源](https://emojipedia.org/)
+[🤝 emoji 资源](https://emojipedia.org/)
 
-[👋 3dicons资源](https://3dicons.co/?ref=usniemvuilaptrinh)
+[👋 3dicons 资源](https://3dicons.co/?ref=usniemvuilaptrinh)
 
 [💪 图片背景资源](https://wallhaven.cc/)
 
-[🍂 cdnjs资源](https://cdnjs.com/)
+[🍂 cdnjs 资源](https://cdnjs.com/)
 
 [🎰 油猴脚本资源](https://greasyfork.org/zh-CN)
 
 [🧵 图片压缩](https://picdiet.eula.club/)
 
-[🎭 测试网站能不能用jscss](https://caniuse.com/)
+[🎭 测试网站能不能用 jscss](https://caniuse.com/)
 
-[🎺 图片压缩2](https://tinypng.com/)
+[🎺 图片压缩 2](https://tinypng.com/)
 
 [⛄ Vue H5 Template](https://sunniejs.github.io/vue-h5-template/#/README)
 
@@ -61,7 +64,7 @@
 
 [🦃 Vue-vben-admin](https://vvbin.cn/doc-next/)
 
-[🌱 Fiddler的使用](https://blog.csdn.net/ychgyyn/article/details/82154433)
+[🌱 Fiddler 的使用](https://blog.csdn.net/ychgyyn/article/details/82154433)
 
 [☪️ segmentfault](https://segmentfault.com/)
 
@@ -71,7 +74,7 @@
 
 [🥫 资源搜索引擎](https://www.nav3.cn/#/light)
 
-[🥫 资源搜索引擎2](https://www.5cv.top/)
+[🥫 资源搜索引擎 2](https://www.5cv.top/)
 
 [🥫 资源搜索捷径盒](https://jiejinghe.com/)
 
