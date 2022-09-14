@@ -41,6 +41,8 @@
 > 如果采用import 导入包的时候 会加载这个入口文件 ESMoudule
 >
 
+[参考资料](https://www.jianshu.com/p/0ad1e1a8c518)
+
 ---
 
 
