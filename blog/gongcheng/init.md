@@ -21,6 +21,7 @@
 
 ## package.json字段详解
 
+> ESMoudule 能够引用 commonjs的包 ,commonjs不能引用esmoudle
 
 - type字段
 >1 type字段的产生用于定义package.json文件和该文件所在目录根目录中.js文件和无拓展名文件的处理方式。值为’moduel’则当作es模块处理；值为’commonjs’则被当作commonJs模块处理
