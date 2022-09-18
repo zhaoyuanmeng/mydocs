@@ -174,6 +174,8 @@ export function myResolveBlobZip(res, fileName) {
 ---
 
 - 文件解析
+解析xlsx成json可以采用xlsx库
+解析md文件可以采用markdown-it这个包
 
 ```javascript
 
