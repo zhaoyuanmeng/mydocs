@@ -96,7 +96,7 @@
   - [K8s](/blog/yunwei/k8s.md)
   - [Nginx](/blog/yunwei/nginx.md)
 
-- [📤 上面的代码地址](/blog/common/code.md)
+- [📤 工具函数](/blog/common/code.md)
 
 - [💰 好用的轮子](/blog/common/lunzi.md)
 
