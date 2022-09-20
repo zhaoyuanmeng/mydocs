@@ -1,5 +1,7 @@
 # 🎨 宝藏网站
 
+[🎖️ 镜像源 ](https://mirrors.tuna.tsinghua.edu.cn/)
+
 [🎖️ Cnode 社区](https://cnodejs.org/)
 
 [🎖️ AntFU ](https://antfu.me)
