@@ -18,15 +18,29 @@
 
   - Prettier
 
+  - Better Comments
+
   - one Dark Pro
 
   - live server
+
+  - any-rule
 
   - css Peek
 
   - color Picker
 
   - chinese
+
+  - Path Intellisense
+
+  - Shades of Purple
+
+  - Vue 3 Snippets
+
+  - Vue Language Features (Volar)
+
+  - open in browser
 
   - Auto Import
 
