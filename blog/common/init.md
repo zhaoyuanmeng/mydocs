@@ -5,7 +5,34 @@
 - vscode
 
   - 插件 setting sync
-  -
+
+  - translate
+
+  - tabnine AI
+
+  - TypScript React code snippets
+
+  - vscode jsx style
+
+  - vscode-icons
+
+  - Prettier
+
+  - one Dark Pro
+
+  - live server
+
+  - css Peek
+
+  - color Picker
+
+  - chinese
+
+  - Auto Import
+
+  - Auto Rename Tag
+
+  - chinese
 
 - git
 
