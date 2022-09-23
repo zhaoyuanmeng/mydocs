@@ -3,6 +3,7 @@
 # 泛型其实就是一个类型参数带入进去 不要想复杂了
 
 # extends
+
 ```javascript
 
 // 1、接口继承
@@ -51,8 +52,8 @@ type A1 = P<'x' | 'y'> // number
 type A2 = P<never> // string
 ```
 
-
 # Exclude
+
 ```javascript
 
 type A = Exclude<'key1' | 'key2', 'key2'> // 'key1'
@@ -61,10 +62,11 @@ type Exclude<T, U> = T extends U ? never : T
 
 
 ```
-----
 
+---
 
 # Extract
+
 ```javascript
 
 type Extract<T, U> = T extends U ? T : never
@@ -72,9 +74,11 @@ type A = Extract<'key1' | 'key2', 'key1'> // 'key1'
 
 
 ```
-----
+
+---
 
 # Pick
+
 ```javascript
 // 高级类型Pick的定义
 type Pick<T, K extends keyof T> = {
@@ -92,16 +96,19 @@ type A1 = Pick<A, 'name'|'age'>
 type A2 = Pick<A, 'name'|'noSuchKey'>
 
 ```
-----
+
+---
 
 # Record
+
 ```javascript
-type Coord = Record<'x' | 'y', number>;
+type Coord = Record<"x" | "y", number>;
 
 // 等同于
 type Coord = {
-	x: number;
-	y: number;
-}
-
+  x: number,
+  y: number,
+};
 ```
+
+## 阅读神光的

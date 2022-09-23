@@ -102,6 +102,8 @@
 
 - [📉 打包工具](/blog/common/build.md)
 
+- [📉 电脑装机清单](/blog/common/init.md)
+
 - [📅 vscode 插件合集](/blog/common/vscode.md)
 
 - [🐯 宝藏网站](/blog/common/wangzhan.md)
